@@ -1,0 +1,17 @@
+--- maze.c	2024-11-22 21:37:49.083783088 +0300
++++ maze_seed_floorwall_size.c	2024-11-22 21:35:41.946782583 +0300
+@@ -30,10 +30,10 @@
+ }
+ 
+ int main(int argc, char** argv) {
+-    int n = 13;
+-    int seed = 42;
+-    char floor = '*';
+-    char wall = '#';
++    int n = strtol(argv[3], NULL, 10) * 2 + 1;
++    int seed = strtol(argv[1], NULL, 10);
++    char floor = argv[2][0];
++    char wall = argv[2][1];
+     maze_t maze;
+ 
+     srand(seed);

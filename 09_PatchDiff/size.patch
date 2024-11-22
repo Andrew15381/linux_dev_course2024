@@ -1,0 +1,18 @@
+--- maze.c	2024-11-22 21:54:08.196997127 +0300
++++ maze_size.c	2024-11-22 21:53:57.192849968 +0300
+@@ -1,5 +1,6 @@
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ 
+ typedef struct {
+     int n;
+@@ -29,7 +30,7 @@
+ }
+ 
+ int main(int argc, char** argv) {
+-    int n = 13;
++    int n = strtol(argv[1], NULL, 10) * 2 + 1;
+     int seed = 42;
+     char floor = '*';
+     char wall = '#';
